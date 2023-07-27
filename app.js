@@ -59,3 +59,11 @@ function eliminarTarea(e) {
 
 
 boton.addEventListener ('click' , agregarTarea);
+
+
+// este evento es para que al precionar enter cree la tarea nueva sin nececidad de dar click en el boton.
+input.addEventListener ('Keydown' , (e) => {
+    if (e.key === 'Enter') {
+        agregarTarea();
+    }
+});
