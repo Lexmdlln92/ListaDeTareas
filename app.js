@@ -31,8 +31,11 @@ function agregarTarea() {
         eliminar.classList.add('bi', 'bi-trash3-fill', 'icono-eliminar');
         eliminar.addEventListener('click', eliminarTarea);
 
-
         iconos.append(completar,eliminar);
+        // este input.value = '' regresa el estado del place holder a "ingresar tarea"
+
+        input.value = '';
+
 
         // Agregar tarea a la lista
         listaDeTareas.appendChild(tareaNueva);
@@ -62,7 +65,7 @@ boton.addEventListener ('click' , agregarTarea);
 
 
 // este evento es para que al precionar enter cree la tarea nueva sin nececidad de dar click en el boton.
-input.addEventListener ('Keydown' , (e) => {
+input.addEventListener ('keydown' , (e) => {
     if (e.key === 'Enter') {
         agregarTarea();
     }
